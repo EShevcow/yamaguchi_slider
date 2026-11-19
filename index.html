@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Scroll Slides</title>
+
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<div class="slides-container">
+
+  <section class="slide active" data-index="0">
+    <h1>ФЕН и СТАЙЛЕР <br> в уникальном дизайне</h1>
+    <p class="primary-label">2 в 1</p>
+    <div class="slide-container">
+        <div class="slide-card">
+            <span class="secondary-label invert">Фен</span>
+            <img src="images/phen.png" alt="Фен для волос">
+        </div>
+       
+        <div class="slide-card">
+             <span class="secondary-label">Стайлер</span>
+             <img src="images/style.png" alt="Стайлер для волос">
+        </div>
+    </div>
+  </section>
+
+  <section class="slide" data-index="1">
+    <span class="star-label">Не тяжелее <br>чашки кофе</span>
+    <svg
+        className="h-auto w-[min(180px)]"
+        viewBox="0 0 180 180"
+        role="img"
+      >
+        <polygon
+          fill="#3f4243"
+          points="
+            90,18 100.2,31.9 114.6,22.3 119.5,38.9 136.3,34.8 135.2,52.1
+            152.4,54 145.4,69.8 160.9,77.5 149,90 160.9,102.5 145.4,110.2
+            152.4,126 135.2,127.9 136.3,145.2 119.5,141.1 114.6,157.7 100.2,148.1
+            90,162 79.8,148.1 65.4,157.7 60.5,141.1 43.7,145.2 44.8,127.9
+            27.6,126 34.6,110.2 19.1,102.5 31,90 19.1,77.5 34.6,69.8
+            27.6,54 44.8,52.1 43.7,34.8 60.5,38.9 65.4,22.3 79.8,31.9
+          "
+        />
+      </svg>
+   
+       <div class="slide-card">
+        <h2>супер- лёгкий</h2>
+        <span class="title-slide">Уменьшает усталость рук <br> при сушке волос, делая процедуру<br> удобной и приятной даже после <br>
+              напряжённого рабочего дня.
+        </span>
+      <span class="secondary-label">500г</span>
+       </div>
+        
+    
+  </section>
+
+  <section class="slide" data-index="2">
+    <div class="heading-container">
+   <h2><span class="part-1">Для ценителей</span><span class="part-2"><br>комфорта<br>
+     и качества</span>
+     <span class="part-3"> в уходе за волосами</span> 
+    </h2>
+    </div>
+    <span class="slide-subheading">Бесщеточный мотор <br> BLDC</span>
+    <span class="star-label">Салонная <br>мощность</span>
+    <svg
+        className="h-auto w-[min(78vw,360px)]"
+        viewBox="0 0 180 180"
+        role="img"
+      >
+        <polygon
+          fill="#3f4243"
+          points="
+            90,18 100.2,31.9 114.6,22.3 119.5,38.9 136.3,34.8 135.2,52.1
+            152.4,54 145.4,69.8 160.9,77.5 149,90 160.9,102.5 145.4,110.2
+            152.4,126 135.2,127.9 136.3,145.2 119.5,141.1 114.6,157.7 100.2,148.1
+            90,162 79.8,148.1 65.4,157.7 60.5,141.1 43.7,145.2 44.8,127.9
+            27.6,126 34.6,110.2 19.1,102.5 31,90 19.1,77.5 34.6,69.8
+            27.6,54 44.8,52.1 43.7,34.8 60.5,38.9 65.4,22.3 79.8,31.9
+          "
+        />
+      </svg>
+  </section>
+
+</div>
+
+<!-- Боковое колесо иконок (десктоп) 
+
+-->
+ <div class="navigation side-wheel" id="sideWheel">
+    <!-- Боковое кольцо -->
+ <div class="nav-line">
+    <svg width="510" height="510" viewBox="0 0 510 510"
+     xmlns="http://www.w3.org/2000/svg">
+    <circle
+        cx="255"
+        cy="255"
+        r="250"
+        fill="none"
+        stroke="#5e5855"
+        stroke-width="5"
+    />
+</svg>
+</div>
+<nav aria-label="Навигация по слайдам">
+    <!-- Неактивный пункт -->
+    <button class="nav-item item-1 wheel-icon" data-target="0" aria-label="Слайд 1">
+         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span class="nav-title">фен-стайлер <br>2 в 1</span>
+    </button>
+
+    <!-- Активный пункт -->
+    <button class="nav-item item-2 wheel-icon active" data-target="1" aria-label="Слайд 2">
+         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span class="nav-title">суперлегкий</span>
+    </button>
+
+    <!-- Неактивный пункт -->
+    <button class="nav-item wheel-icon item-3" data-target="2" aria-label="Слайд 3">
+         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+         </svg>
+        <span class="nav-title">Инновационный <br>японский мотор</span>
+    </button>
+    </nav>
+</div>
+
+<!-- Точки (мобилка) -->
+<div class="dots" id="dots">
+  <button class="dot active" data-target="0" aria-label="Слайд 1"> 
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+    </svg>
+      <span class="dot-title">фен-стайлер 2 в 1</span>
+  </button>
+  <button class="dot" data-target="1" aria-label="Слайд 2">
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <polyline points="12 6 12 12 16 14"/>
+    </svg>
+    <span class="dot-title">суперлегкий</span>
+  </button>
+  <button class="dot" data-target="2" aria-label="Слайд 3">
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+    </svg>
+     <span class="dot-title">Инновационный японский мотор</span>
+  </button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
